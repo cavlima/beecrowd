@@ -11,7 +11,6 @@ public class Average2 {
     int a = sc.nextInt();
     int b = sc.nextInt();
 
-    System.out.println("MEDIA = " + ((a * 3.5) + (b * 7.5)) / 11);
 
 
 
