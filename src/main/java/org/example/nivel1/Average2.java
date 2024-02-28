@@ -6,13 +6,12 @@ public class Average2 {
 
     public static void main(String[] args) {
 
-    int a,b;
-
     Scanner sc = new Scanner(System.in);
 
-    a = sc.nextInt();
-    b = sc.nextInt();
+    int a = sc.nextInt();
+    int b = sc.nextInt();
 
+    System.out.println("MEDIA = " + ((a * 3.5) + (b * 7.5)) / 11);
 
 
 
