@@ -12,7 +12,6 @@ public class Average2 {
     int b = sc.nextInt();
 
     System.out.println((a + b) / 2.0);
-    //oioi
 
 
 
