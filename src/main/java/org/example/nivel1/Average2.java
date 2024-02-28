@@ -10,6 +10,7 @@ public class Average2 {
 
     Scanner sc = new Scanner(System.in);
 
+    a = sc.nextInt();
 
 
 
