@@ -1,6 +1,5 @@
 package org.example.nivel1;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Average2 {
@@ -27,12 +26,12 @@ public class Average2 {
         for (int i = 0; i < numeros.length; i++) {
 
             while (true) {
-                try {
+                if (scanner.hasNextDouble()) {
                     numeros[i] = scanner.nextDouble();
                     somaNotas += numeros[i] * pesos[i];
                     somaPesos += pesos[i];
                     break;
-                } catch (InputMismatchException e) {
+                } else {
                     System.out.println("Entrada inválida. Por favor, insira um número válido.");
                     scanner.next();
                 }

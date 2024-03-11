@@ -25,18 +25,18 @@ public class SimpleSum {
         int soma = 0; //variável para receber a soma
 
         for (int i = 0; i < 2; i++) {
-
             while (true) {
-                try {
+                if (scan.hasNextInt()) {
                     numeros[i] = scan.nextInt();
                     soma += numeros[i];
                     break;
-                } catch (InputMismatchException e) {
+                } else {
                     System.out.println("Caractere inválido. Tente novamente: ");
                     scan.next();
                 }
             }
-        } scan.close();
+        }
+        scan.close();
         System.out.println("SOMA = " + soma);
     }
 }
