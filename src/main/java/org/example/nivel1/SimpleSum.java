@@ -1,38 +1,42 @@
 package org.example.nivel1;
-import java.util.*;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class SimpleSum {
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
+        /*Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         int b = scan.nextInt();
 
-        System.out.println("SOMA = " + (a + b));
+        System.out.println("SOMA = " + (a + b));*/
 
-        //simpleSumValidator();
+        //tentando aprimorar o código colocando a prova o meu conhecimento
+        // Chamando o método para validar e calcular a soma
+        simpleSumWithValidator();
 
     }
 
-    private static void simpleSumValidator() {
+    private static void simpleSumWithValidator() {
         Scanner scan = new Scanner(System.in);
 
-        int[] numeros = new int[2];
+        int[] numeros = new int[2]; //array de 2 elementos inteiros
+        int soma = 0; //variável para receber a soma
 
         for (int i = 0; i < 2; i++) {
-            boolean validacao = true;
 
-            while(validacao){
-                if (scan.hasNextInt()) {
+            while (true) {
+                try {
                     numeros[i] = scan.nextInt();
-                    validacao = false;
-                } else {
+                    soma += numeros[i];
+                    break;
+                } catch (InputMismatchException e) {
+                    System.out.println("Caractere inválido. Tente novamente: ");
                     scan.next();
-                    System.out.println("Número inválido. Tente novamente: ");
                 }
             }
-        }
-
-        System.out.println("SOMA = " + (numeros[0] + numeros[1]));
+        } scan.close();
+        System.out.println("SOMA = " + soma);
     }
 }
