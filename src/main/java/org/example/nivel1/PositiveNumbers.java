@@ -9,6 +9,39 @@ public class PositiveNumbers {
     }
 
     private static void result() {
+
+        Scanner scan = new Scanner(System.in);
+
+        double[] numeros = new double[6];
+
+        int count = 0;
+        int count2 = 0;
+        int count3 = 0;
+
+        for (int i = 0; i < 6; i++) {
+            numeros[i] = scan.nextDouble();
+        }
+
+        for (double numero : numeros) {
+            if (numero > 0) {
+                count++;
+            } else if (numero < 0) {
+                count2++;
+            } else {
+                count3++;
+            }
+        }
+
+        System.out.println("Quantidade de valores positivos: " + count);
+        //System.out.println("Quantidade de valores negativos: " + count2);
+        //System.out.println("Quantidade de valores iguais a zero: " + count3);
+
+
+        //positiveNumbersValidator();
+
+    }
+
+    private static void positiveNumbersValidator() {
         Scanner scanner = new Scanner(System.in);
 
         //int qtde = scanner.nextInt();
@@ -35,11 +68,13 @@ public class PositiveNumbers {
 
         int count = 0;
         for (double numero : numeros) {
-            if (numero > 0){
+            if (numero > 0) {
                 count++;
             }
         }
 
         System.out.println(count + " valores positivos.");
     }
+
+
 }
