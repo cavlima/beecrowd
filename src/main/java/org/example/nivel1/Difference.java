@@ -1,6 +1,5 @@
 package org.example.nivel1;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Difference {

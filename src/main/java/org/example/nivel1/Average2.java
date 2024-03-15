@@ -15,7 +15,6 @@ public class Average2 {
         System.out.println(String.format("MEDIA = %.1f",media));
         scanner.close();*/
 
-
         averageWithValidator(scanner);
     }
 
